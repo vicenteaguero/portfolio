@@ -1,0 +1,150 @@
+/* assets/css/base.css */
+
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../fonts/Nohemi-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-ecru: #C2B27F;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-light-gray: #A5A5A5;
+    --padding-big: 50px;
+    --padding-normal: 25px;
+    --padding-small: 10px;
+    --padding-tiny: 5px;
+    --left-width: 20%;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi', sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nohemi', sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--color-ecru);
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--color-ecru);
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--color-light-gray);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    color: var(--color-white);
+}
+
+.content {
+    margin: 0;
+    padding: var(--padding-big);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding-top: var(--padding-big);
+}
+
+.left {
+    width: var(--left-width);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    width: calc(100% - var(--left-width) - var(--padding-big));
+    margin: 0;
+    padding: 0;
+    margin-left: var(--padding-big);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    display: block;
+    margin: var(--padding-tiny) 0;
+    padding: var(--padding-small);
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: 'Nohemi', sans-serif;
+    border-radius: var(--padding-small);
+}
+
+.nav-link:hover {
+    background-color: var(--color-ecru);
+    color: var(--color-black);
+}
+
+.nav-link.focused {
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+    outline: none;
+}
