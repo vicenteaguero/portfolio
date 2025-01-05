@@ -1,0 +1,195 @@
+#projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: var(--padding-normal) 0 var(--padding-big) 0;
+}
+
+.tier-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0;
+    /* justify-content: start; */
+    /* Ensures alignment to the left */
+    padding-bottom: var(--padding-big);
+}
+
+.tier-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0;
+    justify-content: start;
+    /* Ensures alignment to the left */
+}
+
+/* Tier 1: Large Cards */
+.tier-1 .project-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* border-radius: var(--padding-small); */
+    overflow: hidden;
+    padding: var(--padding-small);
+    cursor: pointer;
+    background: var(--color-black);
+}
+
+.tier-1 img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.tier-1 .project-content:hover img {
+    filter: grayscale(50%) blur(5px) brightness(0.8);
+}
+
+.tier-1 .project-content h3 {
+    font-size: 1.25rem;
+    color: var(--color-ecru);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 3;
+}
+
+.tier-1 .project-content p {
+    position: absolute;
+    color: var(--color-white);
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 0;
+    margin: 0;
+    padding-top: var(--padding-big);
+}
+
+.tier-1 .project-content:hover p {
+    opacity: 1;
+}
+
+/* Tier 2: Small Cards */
+.tier-2 .project-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* border-radius: var(--padding-small); */
+    overflow: hidden;
+    padding: var(--padding-tiny);
+    cursor: pointer;
+    background: var(--color-black);
+    max-width: 100px;
+}
+
+.tier-2 img {
+    width: 100%;
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.tier-2 .project-content:hover img {
+    filter: grayscale(50%) blur(5px) brightness(0.8);
+}
+
+.tier-2 .project-content h3 {
+    font-size: 1rem;
+    color: var(--color-ecru);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 3;
+}
+
+.tier-2 .project-content p {
+    position: absolute;
+    color: var(--color-white);
+    font-size: 0.75rem;
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 0;
+    margin: 0;
+    padding-top: var(--padding-small);
+}
+
+.tier-2 .project-content:hover p {
+    opacity: 1;
+}
+
+/* Tier 3: Blog-Style List */
+h3.blog-entries-title {
+    font-size: 1.5rem;
+    color: var(--color-ecru);
+    margin: 0;
+    padding: var(--padding-big) 0 var(--padding-normal) 0;
+}
+
+.tier-3 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-small);
+}
+
+.tier-3 .project-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-small);
+    background: var(--color-black);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid var(--color-ecru);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tier-3 .project-content:hover {
+    transform: translateX(10px);
+    background: #2b2b2b;
+    /* Slightly lighter shade for hover effect */
+}
+
+.tier-3 h3 {
+    font-size: 1rem;
+    color: var(--color-ecru);
+    margin: 0;
+    padding: 0 0 var(--padding-tiny) 0;
+}
+
+.tier-3 p {
+    font-size: 0.9rem;
+    color: var(--color-light-gray);
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.tier-3 .project-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--color-ecru);
+    transition: height 0.3s ease, background 0.3s ease;
+}
+
+.tier-3 .project-content:hover::before {
+    height: 100%;
+    background: var(--color-light-gray);
+}
