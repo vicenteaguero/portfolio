@@ -17,7 +17,7 @@
 
 .tier-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 0;
     justify-content: start;
     /* Ensures alignment to the left */
@@ -56,6 +56,7 @@
     padding: 0;
     text-align: center;
     z-index: 3;
+    padding-top: 10px;
 }
 
 .tier-1 .project-content p {
@@ -88,7 +89,7 @@
     padding: var(--padding-tiny);
     cursor: pointer;
     background: var(--color-black);
-    max-width: 100px;
+    padding-bottom: var(--padding-small);
 }
 
 .tier-2 img {
@@ -111,6 +112,7 @@
     padding: 0;
     text-align: center;
     z-index: 3;
+    padding-top: 10px;
 }
 
 .tier-2 .project-content p {
