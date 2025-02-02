@@ -39,6 +39,7 @@
 
 .tier-1 img {
     width: 100%;
+    min-height: 200px;
     max-height: 200px;
     object-fit: contain;
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -63,6 +64,7 @@
     position: absolute;
     color: var(--color-white);
     font-size: 1rem;
+    font-weight: bold;
     text-align: center;
     opacity: 0;
     z-index: 2;
@@ -95,6 +97,7 @@
 .tier-2 img {
     width: 100%;
     max-width: 80px;
+    min-height: 80px;
     max-height: 80px;
     object-fit: contain;
     transition: filter 0.3s ease, transform 0.3s ease;
