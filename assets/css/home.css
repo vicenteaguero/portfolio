@@ -8,3 +8,14 @@
 .banner-subtitle {
     color: white;
 }
+
+a.projects {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    z-index: 0;
+}
+
+a.projects p {
+    z-index: 10;
+}
