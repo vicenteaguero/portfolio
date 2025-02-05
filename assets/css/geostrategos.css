@@ -1,0 +1,15 @@
+/* assets/css/geostrategos.css */
+
+img.geostrategos-logo {
+    width: 500px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    padding-bottom: var(--padding-normal);
+}
+
+img.openun-logo svg {
+    fill: var(--color-white);
+    color: red;
+    background-color: yellow;
+}
