@@ -121,7 +121,8 @@
 .tier-2 .project-content p {
     position: absolute;
     color: var(--color-white);
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: bold;
     text-align: center;
     opacity: 0;
     z-index: 2;
