@@ -6,11 +6,6 @@ function loadContent(pageName) {
         .then(data => {
             const rightContainer = document.querySelector('.right');
             rightContainer.innerHTML = data;
-
-            // Dynamically load and execute `projects.js` if loading the projects page
-            if (pageName === 'projects') {
-                loadProjects();
-            }
         })
         .catch(error => {
             console.error('Error loading content:', error);
