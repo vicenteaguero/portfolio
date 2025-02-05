@@ -80,6 +80,7 @@ h2 {
 }
 
 h3 {
+    padding: var(--padding-normal) 0;
     font-size: 1.5em;
     color: var(--color-light-gray);
 }
