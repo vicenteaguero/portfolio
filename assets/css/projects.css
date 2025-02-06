@@ -34,7 +34,7 @@
     overflow: hidden;
     padding: var(--padding-small);
     cursor: pointer;
-    background: var(--color-black);
+    /* background: var(--color-black); */
 }
 
 .tier-1 img {
@@ -90,7 +90,7 @@
     overflow: hidden;
     padding: var(--padding-tiny);
     cursor: pointer;
-    background: var(--color-black);
+    /* background: var(--color-black); */
     padding-bottom: var(--padding-small);
 }
 
